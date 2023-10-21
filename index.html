@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <head>
     <meta charset="UTF-8">
@@ -9,9 +10,77 @@
 </head>
 
 <body>
-    <div class="header">
-        Хай
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Створити акаунт</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <span>Або використайте власну пошту:</span>
+                <input type="text" placeholder="Ім'я">
+                <input type="email" placeholder="Пошта">
+                <input type="password" placeholder="Пароль">
+                <button>Зареєструвати</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form>
+                <h1>Увійти в акаунт</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <span>Або використайте зареєстрований акаунт:</span>
+                <input type="text" placeholder="Пошта">
+                <input type="password" placeholder="Пароль">
+                <a href="#">Забули пароль?</a>
+                <button>Увійти</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>З поверненням!</h1>
+                    <p>Уже маєте акаунт? Тоді вам сюди!</p>
+                    <button class="hidden" id="login">Увійти</button>
+                </div>
+
+                <div class="toggle-panel toggle-right">
+                    <h1>Вітаю!</h1>
+
+                    <p> Не маєте акаунту? Давайте зареєструєм вас!</p>
+                    <button class="hidden" id="register">Реєстрація</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
+
+<script src="./script.js"></script>
 
 </html>
