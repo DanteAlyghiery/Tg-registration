@@ -26,7 +26,6 @@ body {
     position: relative;
     overflow: hidden;
     width: 768px;
-    min-width: 100%;
     min-height: 480px;
 }
 
