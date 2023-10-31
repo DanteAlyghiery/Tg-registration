@@ -16,7 +16,7 @@ loginBtn.addEventListener('click', () => {
 let tg = window.Telegram.WebApp;
 let buy = document.getElementById('buy');
 let order = document.getElementById('order');
-
+tg.expand();
 buy.addEventListener('click', () => {
     document.getElementById('main').style.display = 'none';
     document.getElementById('form').style.display = 'block';
@@ -25,4 +25,25 @@ buy.addEventListener('click', () => {
     order.addEventListener('click', () => {
         tg.close();
     })
+})
+
+order.addEventListener("click", () => {
+    let name = document.getElementById("user_name").value;
+    let email = document.getElementById("user_email").value;
+    let phone = document.getElementById("user_phone").value;
+
+    if (name.length < 5) {
+        document.getElementById("error").innerText = 'Помилка в імені';
+        return;
+    }
+
+    if (email.length < 5) {
+        document.getElementById("error").innerText = 'Помилка в адресу пошти';
+        return;
+    }
+
+    if (phone.length < 5) {
+        document.getElementById("error").innerText = 'Помилка в номері телефону';
+        return;
+    }
 })
