@@ -28,6 +28,7 @@ buy.addEventListener('click', () => {
 })
 
 order.addEventListener("click", () => {
+    document.getElementById("error").innerText = '';
     let name = document.getElementById("user_name").value;
     let email = document.getElementById("user_email").value;
     let phone = document.getElementById("user_phone").value;
@@ -46,4 +47,13 @@ order.addEventListener("click", () => {
         document.getElementById("error").innerText = 'Помилка в номері телефону';
         return;
     }
+
+    let data = {
+        name: name,
+        email: email,
+        phone: phone
+    }
+    tg.sendData(JSON.stringify(data));
+
+    tg.close();
 })
